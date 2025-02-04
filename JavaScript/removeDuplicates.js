@@ -4,10 +4,12 @@
 var removeDuplicates = function(nums) {
     
     for (let x = 0; x < nums.length; x++) {
-        if ( nums[x] == nums[x+1] ) {
+        if ( nums[x] == nums[x + 1] ) {
+            
             nums.splice(x, 1)
             console.log(x)
-            x--         
+            x--
+                    
         }        
     }
     return nums
