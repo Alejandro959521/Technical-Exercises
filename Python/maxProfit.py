@@ -1,4 +1,4 @@
-arr = [7,1,5,3,6,4]
+arr = [7,6,4,3,1]
 
 def maxProfit(prices):
     
@@ -14,7 +14,8 @@ def maxProfit(prices):
     max_profit = 0
     for price in prices:
         min_price = min(min_price, price)
-        max_profit = max(max_profit, price - min_price)
+        beneficio_actual = price - min_price
+        max_profit = max(max_profit, beneficio_actual)
     return max_profit 
 
 print(maxProfit(arr))
