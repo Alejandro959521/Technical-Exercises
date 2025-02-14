@@ -1,25 +1,26 @@
 
-let n = 19
+let n = 2
 
 
 var isHappy = function(n) {
-    n = String(n);
-    if (n < 0 || n <= 9) return false
+
+    let seen = new Set();
     
-    let arrN = n.split('')
+    let adition = (num) =>  {
 
-    let adition = (arrN) =>  {
-        cont = 0
+        arrN = String(num).split('');   
+        let cont = 0
         for (let x = 0; x < arrN.length; x++) {
-
-            cont += Number(arrN[x])**2
-       
+            cont += Number(arrN[x])**2     
         }
         return cont
     }
     
-        
-    
+    while (n !== 1 && !seen.has(n)){
+        seen.add(n);
+        n = adition(n)
+    }
+        return n === 1;    
 };
 
 console.log(isHappy(n))
