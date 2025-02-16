@@ -1,6 +1,6 @@
 
 
-nums = [0,2,3,4,6,8,9]
+let nums = [0,2,3,4,6,8,9]
 
 var summaryRanges = function(nums) {
 
