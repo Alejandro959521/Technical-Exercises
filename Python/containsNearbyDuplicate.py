@@ -6,7 +6,7 @@ def containsNearbyDuplicate(nums, k):
    
     seen = {}
 
-    for y in range(0, len(nums)):
+     for y in range(0, len(nums)):
         
         if (nums[y] in seen and abs(y - seen[nums[y]]) <= k):
             return True
