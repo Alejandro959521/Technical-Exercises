@@ -1,26 +1,22 @@
- s = "pwwkew"
+ s = "pwwkeww"
 
 
  var lengthOfLongestSubstring = function(s) {
 
     let arr = []
-    let str = ""
+    let count = 0
+
         for (let x of s) {
             
             if (arr.includes(x)) {
-                arr.push(str)
-                let str = ""
+                arr.splice(0, arr.indexOf(x) + 1);
             }
-
-            else {
-
-                str += x
-
-            }
-            
+            arr.push(x);
+            count = Math.max(count, arr.length); 
+            console.log(arr)
         }
-
-        return arr
+        
+        return count
     
  };
 
