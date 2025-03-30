@@ -19,7 +19,7 @@ var canConstruct = function(ransomNote, magazine) {
             } 
         }
        
-        return x == ransomNote.length
+        return x == ransomNote.length 
         
 };
 console.log(canConstruct(ransomNote, magazine))
